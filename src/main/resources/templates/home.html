@@ -4,36 +4,24 @@
     <title>Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body class="bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-900 text-white min-h-screen">
 
-<nav class="bg-slate-900 shadow-lg border-b border-emerald-500/20">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-emerald-400">
-            Spring MVC Lab
-        </h1>
-        <a href="/products" class="text-slate-300 hover:text-emerald-400 transition">
-            Products
+<!-- Navbar -->
+<div th:replace="~{fragments/layout :: navbar}"></div>
+
+<div class="container mx-auto px-6 py-28">
+    <div class="bg-slate-800 rounded-3xl shadow-lg border border-emerald-500/20 p-16 text-center hover:shadow-emerald-500/30 transition duration-300">
+        <h2 class="text-5xl font-extrabold text-emerald-400 mb-6">Product Management System</h2>
+        <p class="text-gray-300 mb-10 text-lg">MVC Pattern & Controller Layer</p>
+        <a th:href="@{/products}"
+           class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+            Explore Products
         </a>
     </div>
-</nav>
-
-<div class="container mx-auto px-6 py-24 text-center">
-    <h2 class="text-5xl font-bold mb-6 text-white">
-        Product Management System
-    </h2>
-
-    <p class="text-slate-400 mb-10 text-lg">
-        MVC Pattern & Controller Layer
-    </p>
-
-    <a href="/products"
-       class="bg-emerald-600 hover:bg-emerald-500
-              text-white font-semibold
-              px-10 py-4 rounded-xl shadow-lg transition duration-300">
-        Explore Products
-    </a>
 </div>
+
+<!-- Footer -->
+<div th:replace="~{fragments/layout :: footer}"></div>
 
 </body>
 </html>

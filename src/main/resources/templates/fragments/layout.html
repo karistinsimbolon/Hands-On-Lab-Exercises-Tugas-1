@@ -1,52 +1,38 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<!-- Fragment: Navbar -->
+<!-- NAVBAR -->
 <nav th:fragment="navbar"
-     class="bg-slate-900 border-b border-emerald-500/20">
-
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-
-        <a th:href="@{/}"
-           class="text-emerald-400 font-bold text-xl">
-            Spring MVC Lab
+     class="bg-slate-900 shadow-lg border-b border-emerald-500/20">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <!-- Logo / Judul -->
+        <a class="text-2xl font-bold text-emerald-400 tracking-wide" th:href="@{/}">
+            🖥️Spring MVC Lab
         </a>
 
+        <!-- Menu kanan -->
         <div class="space-x-6">
-            <a th:href="@{/}"
-               class="text-gray-300 hover:text-emerald-400 transition">
+            <a th:href="@{/}" class="text-white hover:text-emerald-400 font-medium transition">
                 Home
             </a>
-
-            <a th:href="@{/products}"
-               class="text-gray-300 hover:text-emerald-400 transition">
-                Produk
+            <a th:href="@{/products}" class="text-white hover:text-emerald-400 font-medium transition">
+                Products
             </a>
-
-            <a th:href="@{/about}"
-               class="text-gray-300 hover:text-emerald-400 transition">
+            <a th:href="@{/about}" class="text-white hover:text-emerald-400 font-medium transition">
                 About
             </a>
-
-            <a th:href="@{/statistics}"
-               class="text-gray-300 hover:text-emerald-400 transition">
-                Statistik
+            <a th:href="@{/statistics}" class="text-white hover:text-emerald-400 font-medium transition">
+                Statistics
             </a>
         </div>
-
     </div>
 </nav>
 
-<!-- Fragment: Footer -->
+<!-- FOOTER -->
 <footer th:fragment="footer"
-        class="bg-slate-900 border-t border-emerald-500/20 mt-16">
-
-    <div class="max-w-6xl mx-auto px-6 py-6 text-center">
-
-        <p class="text-gray-400 text-sm">
-            Spring MVC Lab &copy; 2026 | WEB-202 Week 4
-        </p>
-
+        class="bg-green-100 text-center py-6 mt-20 border-t-4 border-green-800 shadow-inner">
+    <div class="max-w-7xl mx-auto">
+        <p class="font-semibold text-green-800">Spring MVC Lab © 2026</p>
     </div>
 </footer>
 

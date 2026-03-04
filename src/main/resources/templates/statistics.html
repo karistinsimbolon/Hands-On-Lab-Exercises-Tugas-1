@@ -13,46 +13,24 @@
     <h2 class="text-3xl font-bold text-emerald-400">Statistik Produk</h2>
     <hr class="my-4 border-emerald-500/30">
 
-    <p class="mt-4">
-        <strong>Total Produk:</strong>
-        <span th:text="${totalProducts}"></span>
-    </p>
+    <p class="mt-4"><strong>Total Produk:</strong> <span th:text="${totalProducts}"></span></p>
 
-    <h5 class="mt-6 font-semibold text-emerald-400">
-        Total Per Kategori:
-    </h5>
+    <h5 class="mt-6 font-semibold text-emerald-400">Total Per Kategori:</h5>
     <ul class="mt-3 space-y-2">
         <li class="bg-slate-800 px-4 py-2 rounded-lg border border-emerald-500/20"
             th:each="entry : ${totalPerCategory}">
-            <span th:text="${entry.key}"></span> :
-            <span th:text="${entry.value}"></span>
+            <span th:text="${entry.key}"></span> : <span th:text="${entry.value}"></span>
         </li>
     </ul>
 
-    <p class="mt-6">
-        <strong>Produk Termahal:</strong>
-        <span th:text="${mostExpensive.name}"></span>
-        (Rp <span th:text="${mostExpensive.price}"></span>)
-    </p>
-
-    <p>
-        <strong>Produk Termurah:</strong>
-        <span th:text="${cheapest.name}"></span>
-        (Rp <span th:text="${cheapest.price}"></span>)
-    </p>
-
-    <p>
-        <strong>Rata-rata Harga:</strong>
-        Rp <span th:text="${averagePrice}"></span>
-    </p>
-
-    <p>
-        <strong>Jumlah Produk Stok &lt; 20:</strong>
-        <span th:text="${lowStockCount}"></span>
-    </p>
+    <div class="mt-6 space-y-2">
+        <p><strong>Produk Termahal:</strong> <span th:text="${mostExpensive.name}"></span> (Rp <span th:text="${mostExpensive.price}"></span>)</p>
+        <p><strong>Produk Termurah:</strong> <span th:text="${cheapest.name}"></span> (Rp <span th:text="${cheapest.price}"></span>)</p>
+        <p><strong>Rata-rata Harga:</strong> Rp <span th:text="${averagePrice}"></span></p>
+        <p><strong>Jumlah Produk Stok &lt; 20:</strong> <span th:text="${lowStockCount}"></span></p>
+    </div>
 </div>
 
 <div th:replace="~{fragments/layout :: footer}"></div>
-
 </body>
 </html>
